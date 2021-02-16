@@ -59,13 +59,13 @@ import Accordion from '@mukhindev/react-accordion';
 
 const data = [
   {
-    id: '1'
-    header: 'Card-1'
+    id: '1',
+    header: 'Card-1',
     body: 'Body-1'
   },
   {
-    id: '2'
-    header: 'Card-2'
+    id: '2',
+    header: 'Card-2',
     body: 'Body-2'
   }
 ];
@@ -74,7 +74,7 @@ const Example1 = () => {
   return {
     <Accordion
       data={ data }
-      keyField="groupId"
+      keyField="id"
       Header={ (headerProps) => (
         <button onClick={ headerProps.onToggle } >
           { headerProps.header }
@@ -110,25 +110,25 @@ import Accordion from '@mukhindev/react-accordion';
 
 const data = [
   {
-    groupId: 'g1'
-    groupName: 'Group-1'
+    groupId: 'g1',
+    groupName: 'Group-1',
     groupData: [
       {
-        id: 'g1-1'
+        id: 'g1-1',
         value: 'Value-1'
       },
       {
-        id: 'g1-2'
+        id: 'g1-2',
         value: 'Value-2'
       }
     ]
   },
   {
-    groupId: 'g2'
-    groupName: 'Group-2'
+    groupId: 'g2',
+    groupName: 'Group-2',
     groupData: [
       {
-        id: 'g2-1'
+        id: 'g2-1',
         value: 'Value-3'
       }
     ]
