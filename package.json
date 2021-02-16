@@ -1,5 +1,5 @@
 {
-  "name": "react-accordion",
+  "name": "@mukhindev/react-accordion",
   "version": "1.0.0",
   "description": "react-accordion React component",
   "main": "lib/index.js",
