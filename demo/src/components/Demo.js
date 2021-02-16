@@ -55,7 +55,7 @@ const Demo = () => {
         Header={ (headerProps) => (
           <button
             className={'demo__accordion-button' + (headerProps.isOpen ? ' demo__accordion-button--opened' : '')}
-            onClick={ headerProps.onClick }
+            onClick={ headerProps.onToggle }
           >
             { headerProps.groupName }
             { headerProps.isOpen ? <span>&darr;</span> : <span>&rarr;</span> }
@@ -73,6 +73,7 @@ const Demo = () => {
                 <a
                   className="demo__accordion-item-link"
                   href={ el.wiki }
+                  target="_blank"
                 >
                   wiki
                 </a>

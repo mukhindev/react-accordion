@@ -56,7 +56,7 @@ const toggleOpenState = (key) => {
             <div className={ `${className}-header` }>
               <Header
                 { ...group }
-                onClick={ () => handleHeaderClick(key) }
+                onToggle={ () => handleHeaderClick(key) }
                 isOpen={ hasOpen(key) }
               />
             </div>
