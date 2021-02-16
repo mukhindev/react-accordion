@@ -1,15 +1,10 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Demo from './components/Demo';
 
-import Example from '../../src'
-
-export default class Demo extends Component {
-  render() {
-    return <div>
-      <h1>react-accordion Demo</h1>
-      <Example/>
-    </div>
-  }
-}
-
-render(<Demo/>, document.querySelector('#demo'))
+ReactDOM.render(
+  <React.StrictMode>
+    <Demo />
+  </React.StrictMode>,
+  document.getElementById('demo'),
+);

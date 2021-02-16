@@ -1,0 +1,81 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  --color-primary: rgb(0, 90, 255);
+  --color-primary-hover: rgb(0, 70, 200);
+  --color-primary-light: rgb(190, 210, 255);
+  --color-gray: rgb(240, 240, 240);
+  --color-white: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+}
+
+.demo {
+  margin: 20vh 0;
+  width: 100%;
+  min-width: 16rem;
+}
+
+.demo__selected-animal {
+  min-height: 1.5rem;
+}
+
+.demo__accordion-button {
+  font: inherit;
+  display: flex;
+  width: 100%;
+  align-items: center; 
+  justify-content: space-between;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0 1rem;
+  min-height: 3rem;
+  margin: 1rem 0 0;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.demo__accordion-button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.demo__accordion-button--opened {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.demo__accordion-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  overflow: hidden;
+}
+
+.demo__accordion-item {
+  background-color: var(--color-gray);
+  cursor: pointer;
+  padding: 0 1rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  transition: 0.25s;
+  color: var(--color-black);
+}
+
+.demo__accordion-item:hover {
+  background-color: var(--color-primary-light);
+}
+
+.demo__accordion-item-link {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.demo__accordion-item-link:hover {
+  text-decoration: underline;
+}
