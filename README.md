@@ -1,11 +1,10 @@
 # react-accordion
 
-Minimalistic accordion for React. Without styles and unnecessary elements. Create what you need using любой JSX and returned data.
+Minimalistic accordion for React. Without styles and unnecessary elements. Create what you need using JSX and returned data.
 
 ## Demo
 
-https://github.com/mukhindev/react-accordion
-
+https://mukhindev.github.io/react-accordion/
 
 ## How to use
 

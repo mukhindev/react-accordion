@@ -17,18 +17,19 @@
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "demo:deploy": "gh-pages -d demo/dist"
   },
-  "dependencies": {},
   "peerDependencies": {
     "react": "16.x",
     "react-dom": "16.x"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "nwb": "0.25.x"
   },
   "author": "Sergey Mukhin",
-  "homepage": "",
+  "homepage": "/react-accordion/",
   "license": "MIT",
   "repository": "",
   "keywords": [
