@@ -172,7 +172,9 @@ Group-2 →
 ### Todo:
 
 - [x] v1
-- [ ] Publish to npm
-- [ ] return props onOpen()
-- [ ] return props onClose()
+- [x] Publish to npm
+- [x] return props onOpen()
+- [x] return props onClose()
+- [ ] Auto-close
+- [ ] Footer
 - [ ] remove `overflow: hidden;` after transition

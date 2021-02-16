@@ -1,7 +1,7 @@
 {
   "name": "@mukhindev/react-accordion",
-  "version": "1.0.1",
-  "description": "react-accordion React component",
+  "version": "1.0.2",
+  "description": "Accordion-component for React",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -29,10 +29,11 @@
     "nwb": "0.25.x"
   },
   "author": "Sergey Mukhin",
-  "homepage": "/react-accordion/",
+  "homepage": "https://mukhindev.github.io/react-accordion/",
   "license": "MIT",
   "repository": "",
   "keywords": [
-    "react-component"
+    "react-component",
+    "accordion"
   ]
 }

@@ -8,7 +8,9 @@ const Accordion = (props) => {
     data = [],
     keyField,
     duration = 0.25,
-    single = false
+    single = false,
+    onOpen,
+    onClose
   } = props
 
   const [ openedGroups, setOpenedGroups ] = useState([]);
@@ -21,24 +23,28 @@ const Accordion = (props) => {
   const findGroupIndex = (key) => openedGroups
   .findIndex((el) => el === key);
 
-const hasOpen = (key) => findGroupIndex(key) > -1;
+  const hasOpen = (key) => findGroupIndex(key) > -1;
 
-const toggleOpenState = (key) => {
+  const toggleOpenState = (key) => {
+    const groupIndex = findGroupIndex(key);
+  
   if (single) {
+    if (groupIndex !== -1) return
     setOpenedGroups([key]);
+    onOpen(key)
     return;
   }
-
-  const groupIndex = findGroupIndex(key);
 
   if (groupIndex === -1) {
     const updatedOpenedGroups = [...openedGroups];
     updatedOpenedGroups.push(key);
     setOpenedGroups(updatedOpenedGroups);
+    onOpen(key)
   } else {
     const updatedOpenedGroups = [...openedGroups];
     updatedOpenedGroups.splice(groupIndex, 1);
     setOpenedGroups(updatedOpenedGroups);
+    onClose(key)
   }
 };
 
