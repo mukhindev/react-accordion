@@ -63,9 +63,9 @@ const Demo = () => {
               { headerProps.isOpen ? <span>&darr;</span> : <span>&rarr;</span> }
             </button>
           ) }
-          Body={ (contentProps) => (
+          Body={ (bodyProps) => (
             <ul className="demo__accordion-list">
-              { contentProps.groupData.map((el) => (
+              { bodyProps.groupData.map((el) => (
                 <li 
                   className="demo__accordion-item"
                   key={ el.id }

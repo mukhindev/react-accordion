@@ -62,6 +62,7 @@ const Accordion = (props) => {
             <div className={ `${className}-header` }>
               <Header
                 { ...group }
+                index
                 onToggle={ () => handleHeaderClick(key) }
                 isOpen={ hasOpen(key) }
               />
@@ -82,6 +83,8 @@ const Accordion = (props) => {
               >
                 <Body
                   { ...group }
+                  index
+                  onToggle={ () => handleHeaderClick(key) }
                   isOpen={ hasOpen(key) }
                 />
               </div>

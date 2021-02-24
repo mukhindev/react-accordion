@@ -1,10 +1,21 @@
 # react-accordion
 
-Minimalistic accordion for React. Without styles and unnecessary elements. Create what you need using JSX and returned data.
+Minimalistic accordion for React. **Without styles and prepared elements**. Create what you need using JSX and returned data.
 
 ## Demo
 
+![Accordion component for React](doc/assets/demo.gif)
+
 https://mukhindev.github.io/react-accordion/
+
+## What new?
+
+* v1.0.3
+  * headerProps and bodyProps now return group index (for example you can style the first or last elements)
+  * bodyProps now return `onToggle` (for example can be used for auto-close)
+* v1.0.2
+* v1.0.1
+* v1.0.0
 
 ## How to use
 
@@ -19,16 +30,19 @@ npm i @mukhindev/react-accordion
 
 ```JSX
 <Accordion
+  className="" // custom class, optional (default: 'accordion')
   data={ data } // data array
   keyField="groupId" // unique key field in the data array
   Header={ (headerProps) => (
     // any JSX for header
   ) }
-  Body={ (contentProps) => (
+  Body={ (bodyProps) => (
     // any JSX for body
   ) }
   duration={ 0.25 } // transition duration in s / optional (default: 0.25)
   single // automatic closing for other groups / optional (default: false)
+  onOpen={ () => {} } // group opening hook, returns the group key
+  onClose={ () => {} } // group closing hook, returns the group key (not if 'single')
 />
 ```
 
@@ -36,17 +50,18 @@ npm i @mukhindev/react-accordion
 ```JSX
 <Accordion
   Header={ (headerProps) => () }
-  Body={ (contentProps) => () }
+  Body={ (bodyProps) => () }
 />
 ```
 
-`headerProps` and `contentProps` contain the same data:
+`headerProps` and `bodyProps` contain the same data:
 
 ```javascript
 {
   ...data // data item from data array
   onToggle // function —> open/close
   isOpen // bool, сurrent open/close state
+  index // group index
 }
 ```
 
@@ -79,9 +94,9 @@ const Example1 = () => {
           { headerProps.header }
         </button>
       ) }
-      Body={ (contentProps) => (
+      Body={ (bodyProps) => (
         <div>
-          { contentProps.body }
+          { bodyProps.body }
         </div>
       ) }
     />
@@ -144,9 +159,9 @@ const Example2 = () => {
           { headerProps.groupName }
         </button>
       ) }
-      Body={ (contentProps) => (
+      Body={ (bodyProps) => (
         <div>
-          { contentProps.groupData.map((el) => (
+          { bodyProps.groupData.map((el) => (
             <div key={ el.id }>{ el.value }</div>
           )) }
         </div>
@@ -175,6 +190,7 @@ Group-2 →
 - [x] Publish to npm
 - [x] return props onOpen()
 - [x] return props onClose()
+- [x] return props group index
 - [ ] Auto-close
 - [ ] Footer
 - [ ] remove `overflow: hidden;` after transition

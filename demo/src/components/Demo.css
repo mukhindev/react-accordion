@@ -3,8 +3,7 @@
   font-size: 18px;
   --color-primary: rgb(0, 90, 255);
   --color-primary-hover: rgb(0, 70, 200);
-  --color-primary-light: rgb(190, 210, 255);
-  --color-gray: rgb(240, 240, 240);
+  --color-gray: rgb(220, 220, 220);
   --color-white: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
@@ -39,8 +38,8 @@ body, #demo {
   width: 100%;
   align-items: center; 
   justify-content: space-between;
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
   padding: 0 1rem;
   min-height: 3rem;
   margin: 1rem 0 0;
@@ -49,10 +48,12 @@ body, #demo {
   border-radius: 0.5rem;
   transition: 0.25s;
   cursor: pointer;
+  border: 1px solid var(--color-gray);
 }
 
 .demo__accordion-button:hover {
-  background-color: var(--color-primary-hover);
+  color: var(--color-white);
+  background-color: var(--color-primary);
 }
 
 .demo__accordion-button--opened {
@@ -63,12 +64,14 @@ body, #demo {
   margin: 0;
   padding: 0;
   list-style: none;
+  border: 1px solid var(--color-gray);
+  border-top: none;
   border-radius: 0 0 0.5rem 0.5rem;
   overflow: hidden;
 }
 
 .demo__accordion-item {
-  background-color: var(--color-gray);
+  background-color: var(--color-white);
   cursor: pointer;
   padding: 0 1rem;
   min-height: 3rem;
@@ -80,7 +83,7 @@ body, #demo {
 }
 
 .demo__accordion-item:hover {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-gray);
 }
 
 .demo__accordion-item-link {
@@ -116,6 +119,5 @@ body, #demo {
 }
 
 .demo__link:hover {
-  color: var(--color-primary-hover);
   text-decoration: underline;
 }
