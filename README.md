@@ -4,12 +4,14 @@ Minimalistic accordion for React. **Without styles and prepared elements**. Crea
 
 ## Demo
 
-![Accordion component for React](doc/assets/demo.gif)
+![Accordion component for React](https://github.com/mukhindev/react-accordion/blob/main/doc/assets/demo.gif?raw=true)
 
 https://mukhindev.github.io/react-accordion/
 
 ## What new?
 
+* v1.0.4
+  * fix image in readme.md
 * v1.0.3
   * headerProps and bodyProps now return group index (for example you can style the first or last elements)
   * bodyProps now return `onToggle` (for example can be used for auto-close)
